@@ -11,7 +11,7 @@
   "type": "collection",
   "entry": [
     {
-      resource: {
+      "resource": {
         "resourceType": "Patient",
         "identifier": {
           // We are assuming the CHO uses medical record numbers. We support other
@@ -28,9 +28,11 @@
           "use": "nickname",
           "text": "Tiny Tim",
           "family": "Cratchit",
-          "given": "Timothy"
+          "given": [
+            "Timothy"
+          ]
         },
-        "gender", "male",
+        "gender": "male",
         "birthDate": "1839-01-01",
         "generalPractitioner": [
           {
@@ -54,21 +56,21 @@
               "display": "unrestricted"
             },
             {
-              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "system": "http://hl7.org/fhir/v3/ActCode/",
               "code": "ADOL",
               "display": "adolescent information sensitivity"
             },
-                        {
-              "system": "http://hl7.org/fhir/v3/ActCode/"
+            {
+              "system": "http://hl7.org/fhir/v3/ActCode/",
               "code": "DELAU",
               "display": "delete after use"
             }
           ]
         }
-      },
+      }
     },
     {
-      resource: {
+      "resource": {
         "resourceType": "Condition",
         "identifier": {
           "use": "temp",
@@ -102,7 +104,7 @@
               "display": "Medical record number"
             },
             "value": "MR123456"
-          },
+          }
         },
         "context": {
           "identifier": {
@@ -110,12 +112,11 @@
             "value": "MR123456-E1"
           }
         },  
-        }
         "onsetDateTime": "1842-12-25",
         "note": [
           {
             "text": "MR123456-E1,MR123456-E2"
-          },
+          }
         ],
         "meta": {
           "security": [
@@ -126,21 +127,21 @@
               "display": "restricted"
             },
             {
-              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "system": "http://hl7.org/fhir/v3/ActCode/",
               "code": "ADOL",
               "display": "adolescent information sensitivity"
             },
-                        {
-              "system": "http://hl7.org/fhir/v3/ActCode/"
+            {
+              "system": "http://hl7.org/fhir/v3/ActCode/",
               "code": "DELAU",
               "display": "delete after use"
             }
           ]
         }
-      },
+      }
     },
     {
-      resource: {
+      "resource": {
         "resourceType": "Encounter",
         "identifier": {
           "use": "temp",
@@ -160,7 +161,7 @@
               "display": "Medical record number"
             },
             "value": "MR123456"
-          },        
+          }
         },
         "participant": [
           {
@@ -199,7 +200,7 @@
         "period": {
           "start": "1843-12-24T19:00+01:00",
           "end": "1843-12-24T20:00+01:00"
-        }
+        },
         "meta": {
           "security": [
             {
@@ -209,21 +210,21 @@
               "display": "restricted"
             },
             {
-              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "system": "http://hl7.org/fhir/v3/ActCode/",
               "code": "ADOL",
               "display": "adolescent information sensitivity"
             },
-                        {
-              "system": "http://hl7.org/fhir/v3/ActCode/"
+            {
+              "system": "http://hl7.org/fhir/v3/ActCode/",
               "code": "DELAU",
               "display": "delete after use"
             }
           ]
         }
-      },
+      }
     },
     {
-      resource: {
+      "resource": {
         "resourceType": "Encounter",
         "identifier": {
           "use": "temp",
@@ -243,7 +244,7 @@
               "display": "Medical record number"
             },
             "value": "MR123456"
-          },        
+          }    
         },
         "participant": [
           {
@@ -282,7 +283,7 @@
         "period": {
           "start": "1844-01-04T10:00+01:00",
           "end": "1844-01-04T11:00+01:00"
-        }
+        },
         "meta": {
           "security": [
             {
@@ -296,7 +297,7 @@
               "code": "ADOL",
               "display": "adolescent information sensitivity"
             },
-                        {
+            {
               "system": "http://hl7.org/fhir/v3/ActCode/"
               "code": "DELAU",
               "display": "delete after use"
@@ -316,14 +317,15 @@
         "display": "restricted"
       },
       {
-        "system": "http://hl7.org/fhir/v3/ActCode/"
+        "system": "http://hl7.org/fhir/v3/ActCode/",
         "code": "ADOL",
         "display": "adolescent information sensitivity"
       },
       {
-        "system": "http://hl7.org/fhir/v3/ActCode/"
+        "system": "http://hl7.org/fhir/v3/ActCode/",
         "code": "DELAU",
         "display": "delete after use"
       }
     ]
-  }  
+  }
+}

@@ -40,7 +40,7 @@
       "network": {
         "address": "https://mycho.net/network?location=Choville&condition=wasting",
         "type": "5",
-      },
+      }
     },
     {
       "role": [
@@ -61,7 +61,7 @@
       "network": {
         "address": "https://ghatlas.io/network",
         "type": "5",
-      },
+      }
     },
     {
       "role": [
@@ -112,10 +112,11 @@
   },
   "entity": [
     {
-      "reference": {
-        "identifier": {
-          "value": "Tim, Tiny"
-        }
+      // In the abscence of Medical Record numbers, we use a different form
+      // of identification; this is subject to negotiation. AuditEvents on the
+      // originating server side retain this information; ATLAS will not.
+      "identifier": {
+        "value": "Tim, Tiny"
       },
       "type": {
         "system": "http://hl7.org/fhir/resource-types",
@@ -152,10 +153,11 @@
       "description": "medical record, child under age 5 wasting, MyCHO location Choville"
     },
     {
-      "reference": {
-        "identifier": {
-          "value": "Thumb, Tom"
-        }
+      // In the abscence of Medical Record numbers, we use a different form
+      // of identification; this is subject to negotiation. AuditEvents on the
+      // originating server side retain this information; ATLAS will not.
+      "identifier": {
+        "value": "Thumb, Tom"
       },
       "type": {
         "system": "http://hl7.org/fhir/resource-types",

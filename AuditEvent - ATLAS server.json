@@ -40,7 +40,7 @@
       "network": {
         "address": "https://mycho.net/network?location=Choville&condition=wasting",
         "type": "5",
-      },
+      }
     },
     {
       "role": [
@@ -61,7 +61,7 @@
       "network": {
         "address": "https://ghatlas.io/network",
         "type": "5",
-      },
+      }
     },
     {
       "role": [
