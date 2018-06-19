@@ -1,0 +1,195 @@
+{
+  "resourceType": "AuditEvent",
+  "type": {
+    "system": "http://dicom.nema.org/resources/ontology/DCM",
+    "code": "110106",
+    "display": "Export"
+  },
+  "action": "R",
+  "recorded": "2017-09-22T00:08:00Z",
+  "outcome": "0",
+  "outcomeDesc": "Successful Patient Record Transfer",
+  "purposeOfEvent": [
+    {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/v3/ActReason",
+          "code": "CAREMGT",
+          "display": "Care Management"
+        }
+      ]
+    }
+  ],
+  "agent": [
+    {
+      "role": [
+        {
+          "coding": [
+            {
+              "system": "http://dicom.nema.org/resources/ontology/DCM",
+              "code": "110153",
+              "display": "Source Role ID"
+            }
+          ]
+        }
+      ],
+      "userId": {
+        "value": "MyCHOServer"
+      },
+      "requestor": false,
+      "network": {
+        "address": "https://mycho.net/network?location=Choville&condition=wasting",
+        "type": "5",
+      },
+    },
+    {
+      "role": [
+        {
+          "coding": [
+            {
+              "system": "http://dicom.nema.org/resources/ontology/DCM",
+              "code": "110150",
+              "display": "Application"
+            }
+          ]
+        }
+      ],
+      "userId": {
+        "value": "ATLAS"
+      },
+      "requestor": false,
+      "network": {
+        "address": "https://ghatlas.io/network",
+        "type": "5",
+      },
+    },
+    {
+      "role": [
+        {
+          "coding": [
+            {
+              "system": "http://dicom.nema.org/resources/ontology/DCM",
+              "code": "110152",
+              "display": "Destination Role ID"
+            }
+          ]
+        }
+      ],
+      "userId": {
+        "value": "joe.schmoe@health.mycho.net",
+        "assigner": "MyCHO"
+      },
+      "requestor": true,
+      "network": {
+        "address": "123.456.78.90",
+        "type": "2"
+      },
+      "purposeOfUse": [
+        {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v3/ActReason",
+              "code": "CAREMGT",
+              "display": "Care Management"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "source": {
+    "site": "MyCHO",
+    "identifier": {
+      "value": "MyCHO"
+    },
+    "type": [
+      {
+        "system": "http://hl7.org/fhir/security-source-type",
+        "code": "5",
+        "display": "Database Server"
+      }
+    ]
+  },
+  "entity": [
+    {
+      "reference": {
+        "identifier": {
+          "value": "Tim, Tiny"
+        }
+      },
+      "type": {
+        "system": "http://hl7.org/fhir/resource-types",
+        "code": "Patient",
+        "display": "Patient"
+      },
+      "role": {
+        "system": "http://hl7.org/fhir/object-role",
+        "code": "1",
+        "display": "Patient"
+      },
+      "lifecycle": {
+        "system": "http://hl7.org/fhir/dicom-audit-lifecycle",
+        "code": "9",
+        "display": "Report"
+      },
+      "securityLabel": [
+        {
+          "system": "http://hl7.org/fhir/v3/Confidentiality",
+          "code": "R",
+          "display": "restricted"
+        },
+        {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "ADOL",
+          "display": "adolescent information sensitivity"
+        },
+        {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "DELAU",
+          "display": "delete after use"
+        }
+      ],
+      "description": "medical record, child under age 5 wasting, MyCHO location Choville"
+    },
+    {
+      "reference": {
+        "identifier": {
+          "value": "Thumb, Tom"
+        }
+      },
+      "type": {
+        "system": "http://hl7.org/fhir/resource-types",
+        "code": "Patient",
+        "display": "Patient"
+      },
+      "role": {
+        "system": "http://hl7.org/fhir/object-role",
+        "code": "1",
+        "display": "Patient"
+      },
+      "lifecycle": {
+        "system": "http://hl7.org/fhir/dicom-audit-lifecycle",
+        "code": "9",
+        "display": "Report"
+      },
+      "securityLabel": [
+        {
+          "system": "http://hl7.org/fhir/v3/Confidentiality",
+          "code": "R",
+          "display": "restricted"
+        },
+        {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "ADOL",
+          "display": "adolescent information sensitivity"
+        },
+        {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "DELAU",
+          "display": "delete after use"
+        }
+      ],
+      "description": "medical record, child under age 5 wasting, MyCHO location Choville"
+    }
+  ]
+}

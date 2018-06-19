@@ -1,0 +1,329 @@
+{
+  "resourceType": "Bundle",
+  "identifier": {
+    "type": {
+      "system": "http://hl7.org/fhir/v2/0203",
+      "code": "MR",
+      "display": "Medical record number"
+    },
+    "value": "MR123456"
+  },
+  "type": "collection",
+  "entry": [
+    {
+      resource: {
+        "resourceType": "Patient",
+        "identifier": {
+          // We are assuming the CHO uses medical record numbers. We support other
+          // identification options.
+          "type": {
+            "system": "http://hl7.org/fhir/v2/0203",
+            "code": "MR",
+            "display": "Medical record number"
+          },
+          "value": "MR123456"
+        },
+        "active": true,
+        "name": {
+          "use": "nickname",
+          "text": "Tiny Tim",
+          "family": "Cratchit",
+          "given": "Timothy"
+        },
+        "gender", "male",
+        "birthDate": "1839-01-01",
+        "generalPractitioner": [
+          {
+            "identifier": {
+              "value": "Future, Dr. G.o.C."
+            }
+          }
+        ]
+        "managingOrganization": {
+          "identifier": {
+            "value": "MyCHO"
+          }
+        }
+        "meta": {
+          "security": [
+            {
+              // Note that biographic data available in public records is unrestricted,
+              // unless otherwise specified by local regulations.
+              "system": "http://hl7.org/fhir/v3/Confidentiality",
+              "code": "U",
+              "display": "unrestricted"
+            },
+            {
+              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "code": "ADOL",
+              "display": "adolescent information sensitivity"
+            },
+                        {
+              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "code": "DELAU",
+              "display": "delete after use"
+            }
+          ]
+        }
+      },
+    },
+    {
+      resource: {
+        "resourceType": "Condition",
+        "identifier": {
+          "use": "temp",
+          "value": "MR123456-C1"
+        },
+        "clinicalStatus": "active",
+        "category": [
+          {
+            "system": "http://hl7.org/fhir/condition-category",
+            "code": "problem-list-item",
+            "display": "Problem List Item"
+          }
+        ],
+        "severity": {
+          "system": "http://hl7.org/fhir/ValueSet/condition-severity",
+          "code": "24484000",
+          "display": "Severe"
+        },
+        "code": {
+          // Note that we are using ICD-10-CM codes as opposed to the recommended
+          // SNOMED CT ontology.
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "code": "E43"
+          "display": "Unspecified severe protein-calorie malnutrition"
+        },
+        "subject": {
+          "identifier": {
+            "type": {
+              "system": "http://hl7.org/fhir/v2/0203",
+              "code": "MR",
+              "display": "Medical record number"
+            },
+            "value": "MR123456"
+          },
+        },
+        "context": {
+          "identifier": {
+            "use": "temp",
+            "value": "MR123456-E1"
+          }
+        },  
+        }
+        "onsetDateTime": "1842-12-25",
+        "note": [
+          {
+            "text": "MR123456-E1,MR123456-E2"
+          },
+        ],
+        "meta": {
+          "security": [
+            {
+              // Conditions are classified as restricted or very restricted, depending on code.
+              "system": "http://hl7.org/fhir/v3/Confidentiality",
+              "code": "R",
+              "display": "restricted"
+            },
+            {
+              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "code": "ADOL",
+              "display": "adolescent information sensitivity"
+            },
+                        {
+              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "code": "DELAU",
+              "display": "delete after use"
+            }
+          ]
+        }
+      },
+    },
+    {
+      resource: {
+        "resourceType": "Encounter",
+        "identifier": {
+          "use": "temp",
+          "value": "MR123456-E1"
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "HH",
+          "display": "home health"
+        },
+        "subject": {
+          "identifier": {
+            "type": {
+              "system": "http://hl7.org/fhir/v2/0203",
+              "code": "MR",
+              "display": "Medical record number"
+            },
+            "value": "MR123456"
+          },        
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": {
+                  "system": "http://hl7.org/fhir/v3/ParticipationType",
+                  "code": "PPRF",
+                  "value": "primary performer"
+                }
+              }
+            ],
+            "individual": {
+              "identifier": {
+                "value": "Present, Dr. G.o.C."
+              }
+            }
+          },
+          {
+            "type": [
+              {
+                "coding": {
+                  "system": "http://hl7.org/fhir/v3/ParticipationType",
+                  "code": "SPRF",
+                  "value": "secondary performer"
+                }
+              }
+            ],
+            "individual": {
+              "identifier": {
+                "value": "Scrooge, E."
+              }
+            }
+          }
+        ],
+        "period": {
+          "start": "1843-12-24T19:00+01:00",
+          "end": "1843-12-24T20:00+01:00"
+        }
+        "meta": {
+          "security": [
+            {
+              // Encounters should be classified as restricted, for PHI.
+              "system": "http://hl7.org/fhir/v3/Confidentiality",
+              "code": "R",
+              "display": "restricted"
+            },
+            {
+              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "code": "ADOL",
+              "display": "adolescent information sensitivity"
+            },
+                        {
+              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "code": "DELAU",
+              "display": "delete after use"
+            }
+          ]
+        }
+      },
+    },
+    {
+      resource: {
+        "resourceType": "Encounter",
+        "identifier": {
+          "use": "temp",
+          "value": "MR123456-E2"
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "HH",
+          "display": "home health"
+        },
+        "subject": {
+          "identifier": {
+            "type": {
+              "system": "http://hl7.org/fhir/v2/0203",
+              "code": "MR",
+              "display": "Medical record number"
+            },
+            "value": "MR123456"
+          },        
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": {
+                  "system": "http://hl7.org/fhir/v3/ParticipationType",
+                  "code": "PPRF",
+                  "value": "primary performer"
+                }
+              }
+            ],
+            "individual": {
+              "identifier": {
+                "value": "Future, Dr. G.o.C."
+              }
+            }
+          },
+          {
+            "type": [
+              {
+                "coding": {
+                  "system": "http://hl7.org/fhir/v3/ParticipationType",
+                  "code": "SPRF",
+                  "value": "secondary performer"
+                }
+              }
+            ],
+            "individual": {
+              "identifier": {
+                "value": "Scrooge, E."            
+              }
+            }
+          }
+        ],
+        "period": {
+          "start": "1844-01-04T10:00+01:00",
+          "end": "1844-01-04T11:00+01:00"
+        }
+        "meta": {
+          "security": [
+            {
+              // Encounters should be classified as restricted, for PHI.
+              "system": "http://hl7.org/fhir/v3/Confidentiality",
+              "code": "R",
+              "display": "restricted"
+            },
+            {
+              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "code": "ADOL",
+              "display": "adolescent information sensitivity"
+            },
+                        {
+              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "code": "DELAU",
+              "display": "delete after use"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "meta": {
+    "security": [
+      {
+        // Note that the entire bundle is restricted, since that is the strictest value
+        // of the confidentiality Security Labels of the constituents.
+        "system": "http://hl7.org/fhir/v3/Confidentiality",
+        "code": "R",
+        "display": "restricted"
+      },
+      {
+        "system": "http://hl7.org/fhir/v3/ActCode/"
+        "code": "ADOL",
+        "display": "adolescent information sensitivity"
+      },
+      {
+        "system": "http://hl7.org/fhir/v3/ActCode/"
+        "code": "DELAU",
+        "display": "delete after use"
+      }
+    ]
+  }  
