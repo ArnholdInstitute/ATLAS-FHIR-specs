@@ -112,7 +112,7 @@
   },
   "entity": [
     {
-      // In the abscence of Medical Record numbers, we use a different form
+      // In the absence of Medical Record numbers, we use a different form
       // of identification; this is subject to negotiation. AuditEvents on the
       // originating server side retain this information; ATLAS will not.
       "identifier": {
@@ -153,7 +153,7 @@
       "description": "medical record, child under age 5 wasting, MyCHO location Choville"
     },
     {
-      // In the abscence of Medical Record numbers, we use a different form
+      // In the absence of Medical Record numbers, we use a different form
       // of identification; this is subject to negotiation. AuditEvents on the
       // originating server side retain this information; ATLAS will not.
       "identifier": {
