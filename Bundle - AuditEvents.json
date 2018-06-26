@@ -19,14 +19,15 @@
         "action": "R",
         "recorded": "2017-09-22T00:08:00Z",
         "outcome": "0",
-        "outcomeDesc": "Successful Patient Record Transfer",
+        // Note, this is the transfer of a list of patients and conditions.
+        "outcomeDesc": "Successful Patient List Transfer",
         "purposeOfEvent": [
           {
             "coding": [
               {
                 "system": "http://hl7.org/fhir/v3/ActReason",
-                "code": "CAREMGT",
-                "display": "Care Management"
+                "code": "PUBHLTH",
+                "display": "public health"
               }
             ]
           }
@@ -88,7 +89,11 @@
             ],
             "userId": {
               "value": "joe.schmoe@health.mycho.net",
-              "assigner": "MyCHO"
+              "assigner": {
+                "identifier": {
+                  "value": "MyCHO"
+                }
+              }
             },
             "requestor": true,
             "network": {
@@ -100,8 +105,8 @@
                 "coding": [
                   {
                     "system": "http://hl7.org/fhir/v3/ActReason",
-                    "code": "CAREMGT",
-                    "display": "Care Management"
+                    "code": "PUBHLTH",
+                    "display": "public health"
                   }
                 ]
               }
@@ -131,6 +136,8 @@
             },
             "type": {
               "system": "http://hl7.org/fhir/resource-types",
+              // For a patient appearing as part of a search set returning a list
+              // of patients and conditions, the entity type is "Patient".
               "code": "Patient",
               "display": "Patient"
             },
@@ -161,7 +168,7 @@
                 "display": "delete after use"
               }
             ],
-            "description": "medical record, child under age 5 wasting, MyCHO location Choville"
+            "description": "child under age 5 wasting, MyCHO location Choville"
           },
           {
             // In the absence of Medical Record numbers, we use a different form
@@ -172,6 +179,8 @@
             },
             "type": {
               "system": "http://hl7.org/fhir/resource-types",
+              // For a patient appearing as part of a search set returning a list
+              // of patients and conditions, the entity type is "Patient".
               "code": "Patient",
               "display": "Patient"
             },
@@ -202,7 +211,7 @@
                 "display": "delete after use"
               }
             ],
-            "description": "medical record, child under age 5 wasting, MyCHO location Choville"
+            "description": "child under age 5 wasting, MyCHO location Choville"
           }
         ]
       }
