@@ -19,7 +19,7 @@
         "action": "R",
         "recorded": "2017-09-22T00:08:00Z",
         "outcome": "0",
-        // Note, this is the transfer of a list of patients and conditions.
+        "_comment": "Note, this is the transfer of a list of patients and conditions.",
         "outcomeDesc": "Successful Patient List Transfer",
         "purposeOfEvent": [
           {
@@ -128,16 +128,16 @@
         },
         "entity": [
           {
-            // In the absence of Medical Record numbers, we use a different form
-            // of identification; this is subject to negotiation. AuditEvents on the
-            // originating server side retain this information; ATLAS will not.
+            "_comment1": "In the absence of Medical Record numbers, we use a different form",
+            "_comment2": "of identification; this is subject to negotiation. AuditEvents on the",
+            "_comment3": "originating server side retain this information; ATLAS will not.",
             "identifier": {
               "value": "Tim, Tiny"
             },
             "type": {
               "system": "http://hl7.org/fhir/resource-types",
-              // For a patient appearing as part of a search set returning a list
-              // of patients and conditions, the entity type is "Patient".
+              "_comment1": "For a patient appearing as part of a search set returning a list",
+              "_comment2": "of patients and conditions, the entity type is 'Patient'.",
               "code": "Patient",
               "display": "Patient"
             },
@@ -171,16 +171,16 @@
             "description": "child under age 5 wasting, MyCHO location Choville"
           },
           {
-            // In the absence of Medical Record numbers, we use a different form
-            // of identification; this is subject to negotiation. AuditEvents on the
-            // originating server side retain this information; ATLAS will not.
+            "_comment1": "In the absence of Medical Record numbers, we use a different form",
+            "_comment2": "of identification; this is subject to negotiation. AuditEvents on the",
+            "_comment3": "originating server side retain this information; ATLAS will not.",
             "identifier": {
               "value": "Thumb, Tom"
             },
             "type": {
               "system": "http://hl7.org/fhir/resource-types",
-              // For a patient appearing as part of a search set returning a list
-              // of patients and conditions, the entity type is "Patient".
+              "_comment1": "For a patient appearing as part of a search set returning a list",
+              "_comment2": "of patients and conditions, the entity type is 'Patient'.",
               "code": "Patient",
               "display": "Patient"
             },

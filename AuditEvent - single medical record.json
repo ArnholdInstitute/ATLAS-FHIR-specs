@@ -8,7 +8,7 @@
   "action": "R",
   "recorded": "2017-09-22T00:08:00Z",
   "outcome": "0",
-  // Note, this is the transfer of a single patient record.
+  "_comment": "Note, this is the transfer of a single patient record.",
   "outcomeDesc": "Successful Patient Record Transfer",
   "purposeOfEvent": [
     {
@@ -118,8 +118,8 @@
   "entity": [
     {
       "identifier": {
-        // We are assuming the originating server uses medical record numbers. In the absence
-        // of that, we support other forms of patient identifiers.
+        "_comment1": "We are assuming the originating server uses medical record numbers.",
+        "_comment2": "In the absence of that, we support other forms of patient identifiers.",
         "type": {
           "system": "http://hl7.org/fhir/v2/0203",
           "code": "MR",
@@ -129,7 +129,7 @@
       },
       "type": {
         "system": "http://hl7.org/fhir/resource-types",
-        // For the full medical record of a single patient, the entity type is "Bundle".
+        "_comment": "For the full medical record of a single patient, the entity type is 'Bundle'.",
         "code": "Bundle",
         "display": "Bundle"
       },

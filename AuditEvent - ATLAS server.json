@@ -8,7 +8,7 @@
   "action": "R",
   "recorded": "2017-09-22T00:08:00Z",
   "outcome": "0",
-  // Note, this is the transfer of a list of patients and conditions.
+  "_comment": "Note, this is the transfer of a list of patients and conditions.",
   "outcomeDesc": "Successful Patient List Transfer",
   "purposeOfEvent": [
     {

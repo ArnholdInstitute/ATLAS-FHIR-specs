@@ -15,8 +15,8 @@
         "resourceType": "Patient",
         "identifier": [
           {
-            // We are assuming the CHO uses medical record numbers. We support other
-            // identification options.
+            "_comment1": "We are assuming the CHO uses medical record numbers. We support other",
+            "_comment2": "identification options.",
             "type": {
               "system": "http://hl7.org/fhir/v2/0203",
               "code": "MR",
@@ -60,8 +60,8 @@
         "meta": {
           "security": [
             {
-              // Note that biographic data available in public records is unrestricted,
-              // unless otherwise specified by local regulations.
+              "_comment1": "Note that biographic data available in public records is unrestricted,",
+              "_comment2": "unless otherwise specified by local regulations.",
               "system": "http://hl7.org/fhir/v3/Confidentiality",
               "code": "U",
               "display": "unrestricted"
@@ -108,8 +108,8 @@
         },
         "code": {
           "coding": {
-            // Note that we are using ICD-10-CM codes as opposed to the recommended
-            // SNOMED CT ontology.
+            "_comment1": "Note that we are using ICD-10-CM codes as opposed to the recommended",
+            "_comment2": "SNOMED CT ontology.",
             "system": "http://hl7.org/fhir/sid/icd-10-cm",
             "code": "E43"
             "display": "Unspecified severe protein-calorie malnutrition"
@@ -140,7 +140,7 @@
         "meta": {
           "security": [
             {
-              // Conditions are classified as restricted or very restricted, depending on code.
+              "_comment": "Conditions are classified as restricted or very restricted, depending on code.",
               "system": "http://hl7.org/fhir/v3/Confidentiality",
               "code": "R",
               "display": "restricted"
@@ -255,7 +255,7 @@
         "meta": {
           "security": [
             {
-              // Encounters should be classified as restricted, for PHI.
+              "_comment": "Encounters should be classified as restricted, for PHI.",
               "system": "http://hl7.org/fhir/v3/Confidentiality",
               "code": "R",
               "display": "restricted"
@@ -370,7 +370,7 @@
         "meta": {
           "security": [
             {
-              // Encounters should be classified as restricted, for PHI.
+              "_comment": "Encounters should be classified as restricted, for PHI.",
               "system": "http://hl7.org/fhir/v3/Confidentiality",
               "code": "R",
               "display": "restricted"
@@ -598,7 +598,7 @@
         "meta": {
           "security": [
             {
-              // Encounters should be classified as restricted, for PHI.
+              "_comment": "Encounters should be classified as restricted, for PHI.",
               "system": "http://hl7.org/fhir/v3/Confidentiality",
               "code": "R",
               "display": "restricted"
@@ -836,7 +836,7 @@
         "meta": {
           "security": [
             {
-              // Encounters should be classified as restricted, for PHI.
+              "_comment": "Encounters should be classified as restricted, for PHI.",
               "system": "http://hl7.org/fhir/v3/Confidentiality",
               "code": "R",
               "display": "restricted"
@@ -859,8 +859,8 @@
   "meta": {
     "security": [
       {
-        // Note that the entire bundle is restricted, since that is the strictest value
-        // of the confidentiality Security Labels of the constituents.
+        "_comment1": "Note that the entire bundle is restricted, since that is the strictest value",
+        "_comment2": "of the confidentiality Security Labels of the constituents.",
         "system": "http://hl7.org/fhir/v3/Confidentiality",
         "code": "R",
         "display": "restricted"
