@@ -61,7 +61,7 @@
                     }
                   }
                 }
-              ]
+              ],
               "managingOrganization": {
                 "identifier": {
                   "value": "Choville health post",
@@ -71,7 +71,7 @@
                     }
                   }
                 }
-              }
+              },
               "meta": {
                 "security": [
                   {
@@ -241,7 +241,7 @@
                     }
                   }
                 }
-              ]
+              ],
               "managingOrganization": {
                 "identifier": {
                   "value": "Choville health post",
@@ -251,7 +251,7 @@
                     }
                   }
                 }
-              }
+              },
               "meta": {
                 "security": [
                   {

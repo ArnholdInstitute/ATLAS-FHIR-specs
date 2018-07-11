@@ -47,7 +47,7 @@
               }
             }
           }
-        ]
+        ],
         "managingOrganization": {
           "identifier": {
             "value": "Choville health post",
@@ -56,7 +56,7 @@
               "value": "MyCHO"
             }
           }
-        }
+        },
         "meta": {
           "security": [
             {
@@ -111,7 +111,7 @@
             "_comment1": "Note that we are using ICD-10-CM codes as opposed to the recommended",
             "_comment2": "SNOMED CT ontology.",
             "system": "http://hl7.org/fhir/sid/icd-10-cm",
-            "code": "E43"
+            "code": "E43",
             "display": "Unspecified severe protein-calorie malnutrition"
           }
         },
@@ -376,12 +376,12 @@
               "display": "restricted"
             },
             {
-              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "system": "http://hl7.org/fhir/v3/ActCode/",
               "code": "ADOL",
               "display": "adolescent information sensitivity"
             },
             {
-              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "system": "http://hl7.org/fhir/v3/ActCode/",
               "code": "DELAU",
               "display": "delete after use"
             }
@@ -436,11 +436,13 @@
           }
         },
         "performer": [
-          "identifier": {
-            "value": "Present, Dr. G.o.C.",
-            "assigner": {
-              "identifier": {
-                "value": "MyCHO"
+          {
+            "identifier": {
+              "value": "Present, Dr. G.o.C.",
+              "assigner": {
+                "identifier": {
+                  "value": "MyCHO"
+                }
               }
             }
           }
@@ -487,9 +489,11 @@
                 },
                 "type": {
                   "coding": [
-                    "system": "http://hl7.org/fhir/referencerange-meaning",
-                    "code": "normal",
-                    "display": "Normal Range"
+                    {
+                      "system": "http://hl7.org/fhir/referencerange-meaning",
+                      "code": "normal",
+                      "display": "Normal Range"
+                    }
                   ]
                 },
                 "appliesTo": [
@@ -561,9 +565,11 @@
                 },
                 "type": {
                   "coding": [
-                    "system": "http://hl7.org/fhir/referencerange-meaning",
-                    "code": "normal",
-                    "display": "Normal Range"
+                    {
+                      "system": "http://hl7.org/fhir/referencerange-meaning",
+                      "code": "normal",
+                      "display": "Normal Range"
+                    }
                   ]
                 },
                 "appliesTo": [
@@ -604,12 +610,12 @@
               "display": "restricted"
             },
             {
-              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "system": "http://hl7.org/fhir/v3/ActCode/",
               "code": "ADOL",
               "display": "adolescent information sensitivity"
             },
             {
-              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "system": "http://hl7.org/fhir/v3/ActCode/",
               "code": "DELAU",
               "display": "delete after use"
             }
@@ -664,11 +670,13 @@
           }
         },
         "performer": [
-          "identifier": {
-            "value": "Future, Dr. G.o.C.",
-            "assigner": {
-              "identifier": {
-                "value": "MyCHO"
+          {
+            "identifier": {
+              "value": "Future, Dr. G.o.C.",
+              "assigner": {
+                "identifier": {
+                  "value": "MyCHO"
+                }
               }
             }
           }
@@ -725,9 +733,11 @@
                 },
                 "type": {
                   "coding": [
-                    "system": "http://hl7.org/fhir/referencerange-meaning",
-                    "code": "normal",
-                    "display": "Normal Range"
+                    {
+                      "system": "http://hl7.org/fhir/referencerange-meaning",
+                      "code": "normal",
+                      "display": "Normal Range"
+                    }
                   ]
                 },
                 "appliesTo": [
@@ -799,9 +809,11 @@
                 },
                 "type": {
                   "coding": [
-                    "system": "http://hl7.org/fhir/referencerange-meaning",
-                    "code": "normal",
-                    "display": "Normal Range"
+                    {
+                      "system": "http://hl7.org/fhir/referencerange-meaning",
+                      "code": "normal",
+                      "display": "Normal Range"
+                    }
                   ]
                 },
                 "appliesTo": [
@@ -842,12 +854,12 @@
               "display": "restricted"
             },
             {
-              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "system": "http://hl7.org/fhir/v3/ActCode/",
               "code": "ADOL",
               "display": "adolescent information sensitivity"
             },
             {
-              "system": "http://hl7.org/fhir/v3/ActCode/"
+              "system": "http://hl7.org/fhir/v3/ActCode/",
               "code": "DELAU",
               "display": "delete after use"
             }
