@@ -247,7 +247,9 @@
                   }
                 }
               }
-            },
+            }
+          },
+          {
             "location": {
               "display": "18 Bayham Street, Choville"
             }
