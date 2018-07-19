@@ -13,9 +13,13 @@
         "resourceType": "Bundle",
         "identifier": {
           "type": {
-            "system": "http://hl7.org/fhir/v2/0203",
-            "code": "MR",
-            "display": "Medical record number"
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/v2/0203",
+                "code": "MR",
+                "display": "Medical record number"
+              }
+            ]
           },
           "value": "MR123456"
         },
@@ -29,9 +33,13 @@
                   "_comment1": "We are assuming the CHO uses medical record numbers. We support other",
                   "_comment2": "identification options.",
                   "type": {
-                    "system": "http://hl7.org/fhir/v2/0203",
-                    "code": "MR",
-                    "display": "Medical record number"
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/v2/0203",
+                        "code": "MR",
+                        "display": "Medical record number"
+                      }
+                    ]
                   },
                   "value": "MR123456"
                 }
@@ -107,35 +115,45 @@
               "clinicalStatus": "active",
               "category": [
                 {
-                  "coding": {
-                    "system": "http://hl7.org/fhir/condition-category",
-                    "code": "problem-list-item",
-                    "display": "Problem List Item"
-                  }
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/condition-category",
+                      "code": "problem-list-item",
+                      "display": "Problem List Item"
+                    }
+                  ]
                 }
               ],
               "severity": {
-                "coding": {
-                  "system": "http://hl7.org/fhir/ValueSet/condition-severity",
-                  "code": "24484000",
-                  "display": "Severe"
-                }
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/ValueSet/condition-severity",
+                    "code": "24484000",
+                    "display": "Severe"
+                  }
+                ]
               },
               "code": {
-                "coding": {
-                  "_comment1": "Note that we are using ICD-10-CM codes as opposed to the recommended",
-                  "_comment2": "SNOMED CT ontology.",
-                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
-                  "code": "E43",
-                  "display": "Unspecified severe protein-calorie malnutrition"
-                }
+                "coding": [
+                  {
+                    "_comment1": "Note that we are using ICD-10-CM codes as opposed to the recommended",
+                    "_comment2": "SNOMED CT ontology.",
+                    "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                    "code": "E43",
+                    "display": "Unspecified severe protein-calorie malnutrition"
+                  }
+                ]
               },
               "subject": {
                 "identifier": {
                   "type": {
-                    "system": "http://hl7.org/fhir/v2/0203",
-                    "code": "MR",
-                    "display": "Medical record number"
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/v2/0203",
+                        "code": "MR",
+                        "display": "Medical record number"
+                      }
+                    ]
                   },
                   "value": "MR123456"
                 }
@@ -194,9 +212,13 @@
           "_comment1": "We are assuming the CHO uses medical record numbers. We support other",
           "_comment2": "identification options.",
           "type": {
-            "system": "http://hl7.org/fhir/v2/0203",
-            "code": "MR",
-            "display": "Medical record number"
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/v2/0203",
+                "code": "MR",
+                "display": "Medical record number"
+              }
+            ]
           },
           "value": "MR789012"
         },
@@ -210,9 +232,13 @@
                   "_comment1": "We are assuming the CHO uses medical record numbers. We support other",
                   "_comment2": "identification options.",
                   "type": {
-                    "system": "http://hl7.org/fhir/v2/0203",
-                    "code": "MR",
-                    "display": "Medical record number"
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/v2/0203",
+                        "code": "MR",
+                        "display": "Medical record number"
+                      }
+                    ]
                   },
                   "value": "MR789012"
                 }
@@ -287,35 +313,45 @@
               "clinicalStatus": "active",
               "category": [
                 {
-                  "coding": {
-                    "system": "http://hl7.org/fhir/condition-category",
-                    "code": "problem-list-item",
-                    "display": "Problem List Item"
-                  }
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/condition-category",
+                      "code": "problem-list-item",
+                      "display": "Problem List Item"
+                    }
+                  ]
                 }
               ],
               "severity": {
-                "coding": {
-                  "system": "http://hl7.org/fhir/ValueSet/condition-severity",
-                  "code": "24484000",
-                  "display": "Severe"
-                }
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/ValueSet/condition-severity",
+                    "code": "24484000",
+                    "display": "Severe"
+                  }
+                ]
               },
               "code": {
-                "coding": {
-                  "_comment1": "Note that we are using ICD-10-CM codes as opposed to the recommended",
-                  "_comment2": "SNOMED CT ontology.",
-                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
-                  "code": "E43",
-                  "display": "Unspecified severe protein-calorie malnutrition"
-                }
+                "coding": [
+                  {
+                    "_comment1": "Note that we are using ICD-10-CM codes as opposed to the recommended",
+                    "_comment2": "SNOMED CT ontology.",
+                    "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                    "code": "E43",
+                    "display": "Unspecified severe protein-calorie malnutrition"
+                  }
+                ]
               },
               "subject": {
                 "identifier": {
                   "type": {
-                    "system": "http://hl7.org/fhir/v2/0203",
-                    "code": "MR",
-                    "display": "Medical record number"
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/v2/0203",
+                        "code": "MR",
+                        "display": "Medical record number"
+                      }
+                    ]
                   },
                   "value": "MR789012"
                 }
@@ -358,35 +394,45 @@
               "clinicalStatus": "active",
               "category": [
                 {
-                  "coding": {
-                    "system": "http://hl7.org/fhir/condition-category",
-                    "code": "problem-list-item",
-                    "display": "Problem List Item"
-                  }
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/condition-category",
+                      "code": "problem-list-item",
+                      "display": "Problem List Item"
+                    }
+                  ]
                 }
               ],
               "severity": {
-                "coding": {
-                  "system": "http://hl7.org/fhir/ValueSet/condition-severity",
-                  "code": "24484000",
-                  "display": "Severe"
-                }
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/ValueSet/condition-severity",
+                    "code": "24484000",
+                    "display": "Severe"
+                  }
+                ]
               },
               "code": {
-                "coding": {
-                  "_comment1": "Note that we are using ICD-10-CM codes as opposed to the recommended",
-                  "_comment2": "SNOMED CT ontology.",
-                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
-                  "code": "E45",
-                  "display": "Retarded development following protein-calorie malnutrition"
-                }
+                "coding": [
+                  {
+                    "_comment1": "Note that we are using ICD-10-CM codes as opposed to the recommended",
+                    "_comment2": "SNOMED CT ontology.",
+                    "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                    "code": "E45",
+                    "display": "Retarded development following protein-calorie malnutrition"
+                  }
+                ]
               },
               "subject": {
                 "identifier": {
                   "type": {
-                    "system": "http://hl7.org/fhir/v2/0203",
-                    "code": "MR",
-                    "display": "Medical record number"
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/v2/0203",
+                        "code": "MR",
+                        "display": "Medical record number"
+                      }
+                    ]
                   },
                   "value": "MR789012"
                 }
